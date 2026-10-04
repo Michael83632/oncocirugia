@@ -16,10 +16,14 @@ nav a{text-decoration:none;color:var(--suave);font-weight:500;font-size:.95rem}
 nav a:hover,nav a.activo{color:var(--verde)}
 nav a.activo{text-decoration:underline;text-underline-offset:.4rem;text-decoration-thickness:2px}
 
-.hero{padding:5rem 0 4rem}
+.hero{padding:5rem 0 4rem;color:#fff;background:linear-gradient(90deg,rgba(11,37,48,.9) 0%,rgba(16,48,58,.68) 50%,rgba(16,48,58,.3) 100%),url("hero-imagen.jpg") center 35%/cover no-repeat,url("hero-fondo.svg") right center/cover no-repeat,#10303A}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.05;max-width:16ch;letter-spacing:-.02em}
-.hero p{max-width:40rem;margin-top:1.6rem;color:var(--suave);font-size:1.2rem}
-.incision{height:2px;background:var(--verde);margin-top:3rem;transform-origin:left;animation:trazo 1.6s ease-out both}
+.hero p{max-width:40rem;margin-top:1.6rem;color:#C9DADF;font-size:1.2rem}
+.hero .btn.principal{background:#fff;color:var(--tinta);border-color:#fff}
+.hero .btn.principal:hover{background:var(--verde-claro)}
+.hero .btn.secundario{color:#fff;border-color:#9FD8CB}
+.hero .btn.secundario:hover{background:rgba(255,255,255,.12)}
+.incision{height:2px;background:#7FD1BF;margin-top:3rem;transform-origin:left;animation:trazo 1.6s ease-out both}
 @keyframes trazo{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .botones{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
 .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.4rem;font-weight:600;text-decoration:none;border:2px solid var(--verde)}
@@ -36,7 +40,9 @@ h2{font-family:var(--serif);font-weight:600;font-size:2rem;letter-spacing:-.01em
 
 .areas{background:#fff;border-block:1px solid var(--linea)}
 .areas ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0 2.5rem}
-.areas li{padding:1rem 0;border-top:1px solid var(--linea)}
+.areas li{padding:1rem 0;border-top:1px solid var(--linea);display:flex;gap:1rem;align-items:center}
+.areas .ico{flex:none;width:4.5rem;height:4.5rem;border-radius:.6rem}
+.areas .leyenda{margin-top:1.5rem;font-size:.9rem;color:var(--suave)}
 .areas strong{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600}
 .areas span{color:var(--suave);font-size:.95rem}
 
@@ -94,7 +100,7 @@ nav a{padding:.5rem .2rem}
   nav.abierto{display:flex}
   nav a{padding:.8rem .2rem;border-top:1px solid var(--linea);font-size:1rem}
   section{padding:2.75rem 0}
-  .hero{padding:2.5rem 0 2rem}
+  .hero{padding:2.5rem 0 2rem;background:linear-gradient(180deg,rgba(11,37,48,.9),rgba(16,48,58,.75)),url("hero-imagen.jpg") 55% center/cover no-repeat,url("hero-fondo.svg") 75% center/cover no-repeat,#10303A}
   .hero p{font-size:1.1rem}
   .sobre{grid-template-columns:1fr;gap:1.5rem}
   .foto{max-width:22rem;margin:0 auto}

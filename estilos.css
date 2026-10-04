@@ -1,0 +1,111 @@
+:root{
+  --papel:#F2F6F6; --tinta:#10303A; --suave:#4A6670; --verde:#1D7A6A; --verde-claro:#D5EBE6; --linea:#C9D7DA;
+  --serif:"Newsreader",Georgia,serif; --sans:"Public Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--tinta);background:var(--papel);line-height:1.65;font-size:1.05rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header{padding:1.2rem 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.marca{font-family:var(--serif);font-size:1.2rem;font-weight:600;text-decoration:none}
+nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--suave);font-weight:500;font-size:.95rem}
+nav a:hover,nav a.activo{color:var(--verde)}
+nav a.activo{text-decoration:underline;text-underline-offset:.4rem;text-decoration-thickness:2px}
+
+.hero{padding:5rem 0 4rem}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.05;max-width:16ch;letter-spacing:-.02em}
+.hero p{max-width:40rem;margin-top:1.6rem;color:var(--suave);font-size:1.2rem}
+.incision{height:2px;background:var(--verde);margin-top:3rem;transform-origin:left;animation:trazo 1.6s ease-out both}
+@keyframes trazo{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.botones{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.4rem;font-weight:600;text-decoration:none;border:2px solid var(--verde)}
+.btn.principal{background:var(--verde);color:#fff}
+.btn.principal:hover{background:#155e51}
+.btn.secundario{color:var(--verde)}
+.btn.secundario:hover{background:var(--verde-claro)}
+
+section{padding:4rem 0}
+h2{font-family:var(--serif);font-weight:600;font-size:2rem;letter-spacing:-.01em;margin-bottom:1.4rem}
+.sobre{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+.foto{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:.4rem}
+.sobre p+p{margin-top:1rem}
+
+.areas{background:#fff;border-block:1px solid var(--linea)}
+.areas ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0 2.5rem}
+.areas li{padding:1rem 0;border-top:1px solid var(--linea)}
+.areas strong{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.areas span{color:var(--suave);font-size:.95rem}
+
+.trayectoria ol{list-style:none;padding:0;border-left:2px solid var(--verde-claro)}
+.trayectoria li{padding:0 0 1.6rem 1.5rem;position:relative}
+.trayectoria li::before{content:"";position:absolute;left:-.45rem;top:.55rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--verde)}
+.trayectoria time{font-weight:600;color:var(--verde)}
+
+.videos .intro{max-width:40rem;color:var(--suave)}
+.lista-videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,16rem));gap:1.8rem;margin-top:1.8rem}
+.lista-videos video{display:block;width:100%;aspect-ratio:496/864;background:var(--tinta);border-radius:.4rem;object-fit:cover}
+.lista-videos figcaption{margin-top:.7rem;font-weight:500}
+.curso{background:#fff;border-block:1px solid var(--linea)}
+.curso .intro{max-width:40rem;color:var(--suave)}
+.modulos{list-style:none;padding:0;margin:1.5rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.6rem 2rem}
+.modulos li{padding:.7rem 0 .7rem 1.6rem;border-top:1px solid var(--linea);position:relative}
+.modulos li::before{content:"";position:absolute;left:0;top:1.2rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--verde)}
+.compra{background:var(--verde-claro);border-radius:.4rem;padding:1.6rem;margin:1.5rem 0;max-width:38rem}
+.precio{font-family:var(--serif);font-size:2.4rem;font-weight:600;line-height:1.1}
+.precio small{font-family:var(--sans);font-size:.95rem;font-weight:400;color:var(--suave)}
+.curso .nota{font-size:.9rem;color:var(--suave);margin-top:1rem}
+.consulta{background:var(--tinta);color:#fff}
+.consulta p{max-width:38rem;color:#C9DADF}
+.consulta dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin:1.8rem 0}
+.consulta dt{color:#9FC2BA}
+.consulta .btn.principal{background:#fff;color:var(--tinta);border-color:#fff}
+.consulta .btn.principal:hover{background:var(--verde-claro)}
+
+footer{padding:2rem 0;font-size:.85rem;color:var(--suave)}
+
+@media (prefers-reduced-motion:reduce){
+  .incision{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== Responsive ===== */
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+img,video{max-width:100%;height:auto}
+.wrap{padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--papel);border-bottom:1px solid var(--linea);padding:.6rem 0}
+nav a{padding:.5rem .2rem}
+.menu-btn{display:none;width:2.75rem;height:2.75rem;border:1px solid var(--linea);border-radius:.4rem;background:#fff;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:.3rem}
+.menu-btn span{display:block;width:1.3rem;height:2px;background:var(--tinta)}
+.consulta dd{overflow-wrap:anywhere}
+
+@media (max-width:64rem){
+  .sobre{grid-template-columns:1fr 1.6fr;gap:2rem}
+  .hero{padding:3.5rem 0 3rem}
+}
+@media (max-width:48rem){
+  header .wrap{flex-wrap:wrap}
+  .menu-btn{display:flex}
+  nav{display:none;flex-basis:100%;flex-direction:column;gap:0;padding-top:.4rem}
+  nav.abierto{display:flex}
+  nav a{padding:.8rem .2rem;border-top:1px solid var(--linea);font-size:1rem}
+  section{padding:2.75rem 0}
+  .hero{padding:2.5rem 0 2rem}
+  .hero p{font-size:1.1rem}
+  .sobre{grid-template-columns:1fr;gap:1.5rem}
+  .foto{max-width:22rem;margin:0 auto}
+  .botones .btn{flex:1 1 100%;text-align:center}
+  .lista-videos{grid-template-columns:minmax(0,18rem);justify-content:center}
+  .consulta dl{grid-template-columns:1fr;gap:.2rem}
+  .consulta dt{margin-top:.8rem}
+  .compra{padding:1.2rem}
+}
+@media (max-width:24rem){
+  .wrap{padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right))}
+  h2{font-size:1.7rem}
+  .precio{font-size:2rem}
+}

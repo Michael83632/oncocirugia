@@ -1,5 +1,5 @@
 // ====== Configuración: cambia estos datos ======
-const TELEFONO_WHATSAPP = "00000000000"; // código de país + número, sin + ni espacios
+const TELEFONO_WHATSAPP = "005353426775"; // código de país + número, sin + ni espacios
 const MENSAJE_WHATSAPP = "Hola doctor, quisiera pedir una consulta.";
 
 // ====== Curso: enlace de pago y precio ======
